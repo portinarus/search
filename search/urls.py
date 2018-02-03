@@ -1,6 +1,7 @@
-from django.contrib import admin
-from django.urls import path
+# -*- coding: utf-8 -*-
+from django.conf.urls import url
+from search.views import SearchView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url(r'', SearchView().as_view(), name='search'),
 ]
